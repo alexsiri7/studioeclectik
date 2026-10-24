@@ -21,6 +21,5 @@ icon, edit, and choose "Create a new branch and start a pull request".
 
 - **Site:** Cloudflare Pages, deployed automatically from `main`. No build step; `public/` is served as-is.
 - **`functions/_middleware.js`:** redirects the `*.pages.dev` address to studioeclectik.com.
-- **Email:** Cloudflare Email Routing forwards `emma@`, `kat@` and `hello@` (to both).
-  `email-worker/` is the small Worker behind `hello@`; it is deployed by hand with
-  `wrangler deploy`, and its destination addresses are a Worker secret, not in this repo.
+- **Email:** Zoho Mail (UK data centre) hosts the `emma@` and `kat@` mailboxes; `hello@` is a
+  Zoho group that delivers to both. DNS (MX, SPF, DKIM, DMARC) is on Cloudflare.
